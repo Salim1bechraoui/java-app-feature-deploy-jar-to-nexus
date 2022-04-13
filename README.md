@@ -1,2 +1,12 @@
-# java-app-feature-deploy-jar-to-nexus
-Artifact Repository Manager  I  install and run nexus on Docker container  and Created a new Linux User for Nexus  Changed permissions of Nexus executable and sonatype-work folder   Set Nexus configuration to run as Nexus User (nexus. rc file)  Started Nexus with Nexus User  Configured Firewall Rules to open port 8081 to access Nexus from the browser 
+##### build the project
+
+    ./gradlew build
+
+##### build Docker image called java-app. Execute from root
+
+    docker build -t java-app .
+    
+##### push image to repo 
+
+    docker tag java-app demo-app:java-1.0
+    
